@@ -23,7 +23,7 @@ export default function Allcoder({coders}: {coders: ReactElement}){
         <div>
             <h1>All Coders</h1>
             {
-                coders.map((coders:any) => (
+                (coders as unknown as any[]).map((coders:any) => (
                     <Link href={"/coders/" + coders.id} key = {coders.id}>
                         <h3 className={styles.single}>
                             <p>{coders.name}</p>
